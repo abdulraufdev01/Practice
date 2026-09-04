@@ -1,4 +1,4 @@
-
+const API_URL = import.meta.env.VITE_API_URL;
 import axios from 'axios'
 import { useState } from "react";
 
@@ -8,7 +8,7 @@ export default function MongoPractice1() {
 
   async function InsertData() {
     let data = {name : name, designation: designation}
-    let serverRes = await axios.post("http://localhost:3000/insert", data)
+    let serverRes = await axios.post(`${API_URL}/insert`, data)
     console.log(serverRes.data);
     
   }
