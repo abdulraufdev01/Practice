@@ -1,4 +1,4 @@
-import axios from 'axios'
+const API_URL = import.meta.env.VITE_API_URL;ios from 'axios'
 import React from 'react'
 import { useState } from 'react'
 
@@ -8,7 +8,7 @@ export default function MongoP2() {
 
     async function insertCar() {
         let data = {name : name, model: model}
-        let serverRes = await axios.get('http://localhost:3000/insertcar', {params: data})
+        let serverRes = await axios.get(`${API_URL}/insertcar`, {params: data})
         console.log(serverRes.data);
         if (serverRes.data.status == 400) {
             alert(serverRes.data.message)
@@ -17,7 +17,7 @@ export default function MongoP2() {
     }
    async function find() {
     
-    let serverRes =await axios.get('http://localhost:3000/Carall')
+    let serverRes =await axios.get(`${API_URL}/Carall`)
     console.log("data a gya hai ", serverRes.data);
     
   }
