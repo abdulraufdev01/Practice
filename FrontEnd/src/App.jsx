@@ -2,7 +2,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 import MongoP2 from './Pages/MongoP2'
 import MongoPractice1 from './Pages/MongoPractice1'
-import Editsacreen from './Component/editsacreen'
+import Editsacreen from './Component/Editsacreen'
 
 
 function App() {
